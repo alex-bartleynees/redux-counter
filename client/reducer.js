@@ -1,20 +1,15 @@
-const initialWombatState = {
-  wombats: ['Gertrude', 'Bartholemew']
-}
 
-const wombatReducer = (state = initialWombatState, action) => {
+const counterReducer = (state = 0, action) => {
   switch (action.type) {
-    case 'ADD_WOMBAT':
-      return {
-        wombats: [...state.wombats, action.wombat]
-      }
-    case 'DEL_WOMBAT':
-      return {
-        wombats: state.wombats.filter((wombat) => wombat !== action.wombat)
-      }
+    case 'INCREMENT':
+      return state + 1
+  
+    case 'DECREMENT':
+      return state -1 
+
     default:
       return state
   }
 }
 
-export default wombatReducer
+export default counterReducer

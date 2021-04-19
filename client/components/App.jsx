@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Wombats from './Wombats'
+import Counter from './Counter'
 
 function App (props) {
   return (
     <div>
-      <Wombats store={props.store} />
+      <Counter store={props.store} />
     </div>
   )
 }
